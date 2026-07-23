@@ -41,6 +41,11 @@ The final URL will normally be:
 https://USERNAME.github.io/REPOSITORY-NAME/
 ```
 
+Current project links:
+
+- Repository: `https://github.com/johnna67/Basic-Calculus`
+- GitHub Pages: `https://johnna67.github.io/Basic-Calculus/`
+
 The game uses relative paths and a single-file build, so a repository-specific Vite base path is not required.
 
 ## Hosting limits and privacy

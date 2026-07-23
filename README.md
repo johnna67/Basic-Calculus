@@ -2,7 +2,7 @@
 
 A desktop-first, first-person calculus horror escape game. Explore five rooms, survive the Entity, solve 17 questions covering Basic Calculus Lessons 1–12, and reach one of three endings.
 
-**[Play the game](https://ajegz.github.io/infinite-loop-no-escape/)**
+**[Play the game](https://johnna67.github.io/Basic-Calculus/)**
 
 ## Features
 
