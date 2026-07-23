@@ -18,8 +18,8 @@
 - [x] Deployment and testing report
 - [x] Contribution-log template
 - [ ] Add actual member Issues, commits, pull requests, and dates
-- [ ] Insert final repository URL
-- [ ] Insert final GitHub Pages URL
+- [x] Insert final repository URL
+- [x] Insert final GitHub Pages URL
 
 ## Output 3 — Calculus Game
 
@@ -32,8 +32,8 @@
 - [x] Production build generated
 - [x] Automated tests included
 - [x] GitHub Actions workflow included
-- [ ] Upload to the team GitHub account
-- [ ] Enable GitHub Pages
+- [x] Upload to the team GitHub account
+- [x] Enable GitHub Pages
 
 ## Output 4 — Mechanics and Sample Play
 
