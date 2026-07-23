@@ -1,0 +1,30 @@
+{
+  "name": "infinite-loop-no-escape",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "A calculus-based analog-horror escape game with full keyboard and mouse support.",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc --noEmit && vite build",
+    "preview": "vite preview",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "check": "tsc --noEmit && vitest run"
+  },
+  "dependencies": {
+    "katex": "0.17.0",
+    "phaser": "4.2.1"
+  },
+  "devDependencies": {
+    "@types/katex": "0.16.7",
+    "jsdom": "29.0.1",
+    "typescript": "7.0.2",
+    "vite": "8.1.4",
+    "vite-plugin-singlefile": "2.3.3",
+    "vitest": "4.1.10"
+  },
+  "engines": {
+    "node": ">=22.12.0"
+  }
+}
