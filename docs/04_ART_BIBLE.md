@@ -82,7 +82,7 @@ Horror should increase tension without obscuring the calculus task.
 
 ## Concept art production
 
-Three visual-development concept boards are stored in `docs/visuals/`.
+Three visual-development concept boards are stored in `docs/visuals/`. Approved Canva exports for the front/loading and credits screens are stored as optimized runtime assets in `src/assets/`.
 
 They establish:
 
@@ -108,7 +108,9 @@ The final runtime rooms were rebuilt as original procedural SVG/canvas scenes. T
 |---|---|---|---|
 | Concept board 1 | Project concept art | Overall design exploration | Documentation |
 | Concept board 2 | Project concept art | Promotional and room hierarchy | Documentation |
-| Concept board 3 | Project concept art | Gameplay-oriented layout | Title, intro, credits |
+| Concept board 3 | Project concept art | Gameplay-oriented layout | Documentation |
+| Front/loading artwork | Approved Canva export | Entity and haunted-classroom screen artwork | Main menu and introduction |
+| Credits header | Approved Canva export | Project title artwork | Project credits |
 | Five room scenes | Original procedural SVG | Optimized runtime environments | Playable game |
 | Interface | Original HTML/CSS | Responsive controls and HUD | Playable game |
 | Equations | KaTeX | Accurate live notation | Playable game |

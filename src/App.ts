@@ -1,5 +1,6 @@
 import katex from 'katex';
-import conceptArt from './assets/concept-art.webp';
+import creditsHeader from './assets/credits-header.jpeg';
+import frontAndLoadingArt from './assets/front-and-loading.jpeg';
 import { AudioManager } from './audio';
 import { ACHIEVEMENTS, ACHIEVEMENT_BY_ID, INTRO_SLIDES, ROOMS, SPIRIT_BY_ID } from './content';
 import { GameStore, formatTime } from './gameStore';
@@ -53,7 +54,7 @@ export class App {
   private mount(){
     this.root.innerHTML=html`
       <main id="shell">
-        <section id="menu-screen" style="--title-art:url('${conceptArt}')"></section>
+        <section id="menu-screen" style="--title-art:url('${frontAndLoadingArt}')"></section>
         <section id="game-screen" class="hidden">
           <header class="hud">
             <div class="hud-title"><div id="hud-room-number" class="eyebrow"></div><h1 id="hud-room-name"></h1></div>
@@ -170,7 +171,7 @@ export class App {
 
   private showIntro(){
     const slide=INTRO_SLIDES[this.introIndex];
-    this.setModal('intro',html`<article class="intro-art"><img src="${conceptArt}" alt="Abandoned-school concept artwork"><div class="intro-copy"><div class="eyebrow">${esc(slide.eyebrow)}</div><h1>${esc(slide.title)}</h1><p class="lead">${esc(slide.body)}</p><div class="intro-progress">${INTRO_SLIDES.map((_,i)=>`<span class="${i<=this.introIndex?'active':''}"></span>`).join('')}</div><div class="modal-actions"><button id="intro-next" class="ui-button primary" type="button">${this.introIndex===INTRO_SLIDES.length-1?'Enter Room 1':'Continue'}</button><button id="intro-skip" class="ui-button ghost" type="button">Skip introduction</button></div></div></article>`,true);
+    this.setModal('intro',html`<article class="intro-art"><img src="${frontAndLoadingArt}" alt="The Entity standing among abandoned classroom desks"><div class="intro-copy"><div class="eyebrow">${esc(slide.eyebrow)}</div><h1>${esc(slide.title)}</h1><p class="lead">${esc(slide.body)}</p><div class="intro-progress">${INTRO_SLIDES.map((_,i)=>`<span class="${i<=this.introIndex?'active':''}"></span>`).join('')}</div><div class="modal-actions"><button id="intro-next" class="ui-button primary" type="button">${this.introIndex===INTRO_SLIDES.length-1?'Enter Room 1':'Continue'}</button><button id="intro-skip" class="ui-button ghost" type="button">Skip introduction</button></div></div></article>`,true);
     byId<HTMLButtonElement>('intro-next').addEventListener('click',()=>{if(this.introIndex<INTRO_SLIDES.length-1){this.introIndex++;this.showIntro();}else{this.closeModal(false);this.enterRoom(true);}});
     byId<HTMLButtonElement>('intro-skip').addEventListener('click',()=>{this.closeModal(false);this.enterRoom(true);});
   }
@@ -312,7 +313,7 @@ export class App {
   }
 
   private showCredits(){
-    this.setModal('credits',html`<article class="modal wide"><div class="eyebrow">Group 6 · STEM11-G · Basic Calculus</div><h2>Project Credits</h2><img src="${conceptArt}" alt="Visual development board" style="width:100%;max-height:420px;object-fit:cover;border:1px solid rgba(255,255,255,.16)"><p>The visual development board established the palette, Entity silhouette, abandoned-school atmosphere, and interface hierarchy. Runtime backgrounds were rebuilt as lightweight original SVG/canvas scenes for consistency and GitHub Pages performance.</p><div class="card-grid"><div class="info-card"><h4>Banal, Elyssa Mae</h4><p>Project lead · roadmap, coordination, final decisions</p></div><div class="info-card"><h4>Causo, Staccie Norrainne</h4><p>Game writer · lore, worldbuilding, dialogue</p></div><div class="info-card"><h4>De Veyra, Jaden Arabella</h4><p>Game developer · implementation, effects, deployment</p></div><div class="info-card"><h4>Esperanza, Princess Johnna</h4><p>Game designer · mechanics, difficulty, pacing</p></div><div class="info-card"><h4>Guino, Sophia Francesca</h4><p>Creative director · palette, art style, music, aesthetics</p></div><div class="info-card"><h4>Production stack</h4><p>Phaser 4.2.1 · TypeScript · Vite · KaTeX · LocalStorage · GitHub Pages</p></div></div><p>Subject teacher: <strong>Dr. Susan A. Roces</strong>. All critical equations are live KaTeX rather than text embedded in images.</p><div class="modal-actions"><button id="credits-close" class="ui-button primary" type="button">Return</button></div></article>`,true);
+    this.setModal('credits',html`<article class="modal wide credits-modal"><div class="eyebrow">Group 6 · STEM11-G · Basic Calculus</div><h2>Project Credits</h2><img class="credits-header" src="${creditsHeader}" alt="Infinite Loop: No Escape title artwork"><p>The approved title artwork establishes the Entity silhouette and abandoned-school atmosphere. Runtime room backgrounds remain lightweight original SVG/canvas scenes for consistency and GitHub Pages performance.</p><div class="card-grid"><div class="info-card"><h4>Banal, Elyssa Mae</h4><p>Project lead · roadmap, coordination, final decisions</p></div><div class="info-card"><h4>Causo, Staccie Norrainne</h4><p>Game writer · lore, worldbuilding, dialogue</p></div><div class="info-card"><h4>De Veyra, Jaden Arabella</h4><p>Game developer · implementation, effects, deployment</p></div><div class="info-card"><h4>Esperanza, Princess Johnna</h4><p>Game designer · mechanics, difficulty, pacing</p></div><div class="info-card"><h4>Guino, Sophia Francesca</h4><p>Creative director · palette, art style, music, aesthetics</p></div><div class="info-card"><h4>Production stack</h4><p>Phaser 4.2.1 · TypeScript · Vite · KaTeX · LocalStorage · GitHub Pages</p></div></div><p>Subject teacher: <strong>Dr. Susan A. Roces</strong>. All critical equations are live KaTeX rather than text embedded in images.</p><div class="modal-actions"><button id="credits-close" class="ui-button primary" type="button">Return</button></div></article>`,true);
     byId<HTMLButtonElement>('credits-close').addEventListener('click',()=>this.closeModal(this.screen==='playing'));
   }
 

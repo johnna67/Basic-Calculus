@@ -19,7 +19,7 @@ The PDF was extracted and every page was visually inspected before implementatio
 | Entity eyes are misaligned | The fixed CSS eye pair was removed. Each room’s Entity now uses only the eyes positioned in its procedural scene artwork; the pressure overlay is a vignette only. | `09-entity-eyes-aligned.png` |
 | Room view turns black | Room texture changes now cancel stale tweens, swap immediately at 68% opacity, and fade upward to 100%; the scene never fades to zero. | `06-room-2-transition.png`, `07-room-2-visible.png` |
 | Remove journals | Journal content, types, state methods, score event, controls, HUD items, hotspots, dialogs, ending requirements, tests, and documentation were removed. Maximum score is now 3,800. | Automated tests and browser DOM checks |
-| Replace start page, credits, and introduction with Canva designs | Pending: the PDF says the Canva outputs are “to be sent,” and no matching exports were supplied with the PDF or found in the available project/download assets. Existing screens are preserved until the approved files arrive. | Asset search recorded during review |
+| Replace start page, credits, and introduction with Canva designs | Implemented with the approved `FrontPage and Loading Screen.jpeg` and `Credit Header.jpeg` exports. The Entity artwork now anchors the main menu and introduction; the title banner now anchors Project Credits. Live interface text and controls remain accessible HTML. | `src/assets/front-and-loading.jpeg`, `src/assets/credits-header.jpeg` |
 
 ## Verification performed
 
@@ -44,12 +44,11 @@ The PDF was extracted and every page was visually inspected before implementatio
 - `screenshots/08-full-room-names.png`
 - `screenshots/09-entity-eyes-aligned.png`
 
-## Canva asset handoff contract
+## Canva asset handoff
 
-Supply three approved raster exports sized for the existing layouts:
+The approved screen exports were received and integrated on 2026-07-24:
 
-1. Start/title screen artwork
-2. Introduction artwork or slide set
-3. Credits artwork
+1. `front-and-loading.jpeg` — shared main-menu and introduction artwork
+2. `credits-header.jpeg` — Project Credits header artwork
 
-Critical calculus equations and answers will continue to be rendered as live KaTeX, not embedded in those images.
+The source exports remain outside the runtime bundle. Optimized copies live under `src/assets/`, while all controls, credits, introductory copy, calculus equations, and answers remain live HTML or KaTeX rather than being embedded in the images.
