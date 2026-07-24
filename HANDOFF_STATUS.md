@@ -45,7 +45,7 @@
 
 ## Visual implementation
 
-The runtime uses Phaser-generated environments and a coherent analog-horror interface. Curated concept images are included under `reference/visuals/` and `docs/visuals/`. They are visual direction references rather than required runtime dependencies.
+The runtime uses Phaser-rendered environments and a coherent analog-horror interface. Approved front/loading and credits artwork is stored under `src/assets/`.
 
 ## Remaining human review before formal submission
 

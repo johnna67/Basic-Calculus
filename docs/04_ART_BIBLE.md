@@ -22,7 +22,7 @@ Horror should increase tension without obscuring the calculus task.
 
 1. Keep a consistent first-person camera height.
 2. Keep puzzle objects and lower interaction areas readable.
-3. Never embed critical formulas into generated images.
+3. Never embed critical formulas into raster artwork.
 4. Render equations through KaTeX.
 5. Use one dominant accent per room while retaining the charcoal base.
 6. Keep the Entity silhouette consistent: hooded black mass, hidden face, two red eyes.
@@ -80,18 +80,16 @@ Horror should increase tension without obscuring the calculus task.
 - Red danger buttons and green correct feedback
 - Visible keyboard focus states
 
-## Concept art production
+## Screen artwork production
 
-Three visual-development concept boards are stored in `docs/visuals/`. Approved Canva exports for the front/loading and credits screens are stored as optimized runtime assets in `src/assets/`.
+Approved Canva exports for the front/loading and credits screens are stored as optimized runtime assets in `src/assets/`.
 
 They establish:
 
 - Entity silhouette
 - Abandoned-school mood
 - Palette relationships
-- Room-to-room color differences
 - Promotional hierarchy
-- Interface density
 
 The final runtime rooms were rebuilt as original procedural SVG/canvas scenes. This provides:
 
@@ -106,20 +104,9 @@ The final runtime rooms were rebuilt as original procedural SVG/canvas scenes. T
 
 | Asset | Method | Purpose | Final use |
 |---|---|---|---|
-| Concept board 1 | Project concept art | Overall design exploration | Documentation |
-| Concept board 2 | Project concept art | Promotional and room hierarchy | Documentation |
-| Concept board 3 | Project concept art | Gameplay-oriented layout | Documentation |
 | Front/loading artwork | Approved Canva export | Entity and haunted-classroom screen artwork | Main menu and introduction |
 | Credits header | Approved Canva export | Project title artwork | Project credits |
 | Five room scenes | Original procedural SVG | Optimized runtime environments | Playable game |
 | Interface | Original HTML/CSS | Responsive controls and HUD | Playable game |
 | Equations | KaTeX | Accurate live notation | Playable game |
 | Audio | Web Audio synthesis | Ambience and feedback | Playable game |
-
-## Concept boards
-
-![Concept board 1](visuals/concept-board-01.png)
-
-![Concept board 2](visuals/concept-board-02.png)
-
-![Concept board 3](visuals/concept-board-03.png)

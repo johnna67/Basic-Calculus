@@ -11,6 +11,5 @@
 Supporting files:
 
 - `screenshots/` — browser-tested interface captures
-- `visuals/` — visual-development concept boards
 - `../dist/index.html` — standalone production game
 - `../tests/` — automated validation suite

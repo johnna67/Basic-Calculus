@@ -1,6 +1,6 @@
 # Reference Material
 
-This folder contains the original project requirements and curated visual direction used during implementation.
+This folder contains the original project requirements used during implementation.
 
 ## Original proposal
 
@@ -15,9 +15,5 @@ The implementation resolves several open or inconsistent proposal details:
 - Ending conditions, save behavior, Entity pressure, and failure recovery were fully defined.
 - “Lessons 10–12.1” was normalized to **Lessons 10–12**.
 - Normal-line material was excluded because it was outside the listed twelve lessons.
-
-## Visual references
-
-The `visuals/` folder contains curated concept pieces. Use them for composition, mood, palette, UI direction, and character silhouette. Do not copy visible mathematical text from an image into the game without independently verifying it.
 
 Critical equations, choices, hints, and solutions must remain live text or KaTeX so that they are readable and mathematically accurate.
